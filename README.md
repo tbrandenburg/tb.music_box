@@ -1,7 +1,19 @@
 # tb.music_box
 DIY Raspberry Pi Music Box
 
-# Parts list
+# Introduction and Goals
+
+# Drivers and Constraints
+
+# System Context
+
+# Decisions
+
+# Solution Strategy
+
+# Building blocks
+
+## Parts list
 
 |Part|Link|Cost|Amount|
 |---|---|---|---|
