@@ -1,19 +1,19 @@
 # tb.music_box
 DIY Raspberry Pi Music Box
 
-# Introduction and Goals
+## Introduction and Goals
 
-# Drivers and Constraints
+## Drivers and Constraints
 
-# System Context
+## System Context
 
-# Decisions
+## Decisions
 
-# Solution Strategy
+## Solution Strategy
 
-# Building blocks
+## Building blocks
 
-## Parts list
+### Parts list
 
 |Part|Link|Cost|Amount|
 |---|---|---|---|
@@ -33,7 +33,7 @@ DIY Raspberry Pi Music Box
 |Tweezer|https://www.adafruit.com/product/422|3.95$|1|
 |Breadboarding Wires|https://www.adafruit.com/product/153|4.95$|1|
 
-# References
+## References
 
 * https://learn.adafruit.com/touch-pi-portable-raspberry-pi
 * https://learn.adafruit.com/adafruit-pitft-3-dot-5-touch-screen-for-raspberry-pi
