@@ -52,6 +52,7 @@ DIY Raspberry Pi Music Box
 
 * WM8960 Stereo Amp (1W Speaker + Headphone): https://www.waveshare.com/wm8960-audio-hat.htm, https://www.waveshare.com/w/upload/1/18/WM8960_v4.2.pdf, https://www.waveshare.com/w/upload/f/fa/WM8960_Audio_HAT_Schematic.pdf, https://www.waveshare.com/wiki/WM8960_Audio_HAT, https://www.reichelt.de/raspberry-pi-shield-hi-fi-stereo-sound-hat-wm8960-rpi-shd-stereo-p266063.html
 ** Only 1W
+** Jack Detect Bug
 
 * HiFiBerry DAC2 Pro: https://www.hifiberry.com/shop/boards/hifiberry-dac2-pro/, https://www.hifiberry.com/docs/data-sheets/datasheet-dac2-pro/
 * HifiBerry Miniamp: https://www.hifiberry.com/docs/data-sheets/datasheet-miniamp/
@@ -100,16 +101,7 @@ DIY Raspberry Pi Music Box
 
 |Part|Link|Cost|Amount|
 |---|---|---|---|
-|Assembled Pi T-Cobbler Plus|https://www.adafruit.com/product/2028|7.95$|1|
-|Pimoroni Mini Black HAT Hack3r|https://www.adafruit.com/product/3182|14.95|?|
 |Adafruit Perma-Proto HAT for Pi Mini Kit|https://www.adafruit.com/product/2310|4.95|2|
-|Stacking Header|https://www.adafruit.com/product/1979|2.95$|?|
-|GPIO Header|https://www.adafruit.com/product/2222|1.50$|?|
-|GPIO Ribbon Cable|https://www.adafruit.com/product/1988|2.95$|?|
-|Raspberry Pi Camera|https://www.adafruit.com/product/3099|29.95$|?|
-|Adafruit Breadboard|https://www.adafruit.com/product/4354|7.95$|1|
-|Tweezer|https://www.adafruit.com/product/422|3.95$|1|
-|Breadboarding/Jumping Wires|https://www.adafruit.com/product/153|4.95$|1|
 |Abstandshalter (12mm) und Schrauben M2.5||||
 |Einbaumutter M2.5||||
 
