@@ -21,7 +21,7 @@ DIY Portable Spotify Music Box
 * Portability/Low power consumption
 
 * Sound quality over Portability/Power consumption
-* Costs: <300$
+* Costs: <200$
 
 ## System Context
 
