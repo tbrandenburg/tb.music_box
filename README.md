@@ -1,11 +1,16 @@
 # tb.music_box
 DIY Raspberry Pi Music Box
 
+![MusicBox](musicbox.jpg)
+![Inner MusicBox](musicbox_inner.jpg)
+
 ## Introduction and Goals
 
 ### Main requirements
 
-* >=3W speaker power
+* Portable Spotify Music Player
+* Speaker power >=3W
+* SNES Button interface
 
 ## Drivers and Constraints
 
@@ -15,72 +20,45 @@ DIY Raspberry Pi Music Box
 * Good sound quality
 * Portability/Low power consumption
 
-* Sound quality over Portability/Power consumption?
-* Costs?
+* Sound quality over Portability/Power consumption
+* Costs: <300$
 
 ## System Context
 
-* FM Radio?
-** Preferably not because it needs an "audio out" selection or digitalization
-* DAB Radio?
-** E.g. MonkeyBoard (with DAB) too big
-* Headphone Out
+* In/Out:
+  * Display
+  * USB
+* In:
+  * Buttons (SNES-Style)
+  * Power supply
+  * Power switch
+  * Volume control
+* Out:
+  * Speaker
 
 ## Decisions
 
-### Laufzeit + Batterie
-
 ### Amplifier
 
-* Mono/Stereo -> Stereo (siehe Boomboxes und Anwendung als "Fernseher")
-* For portable usage (low current consumption)
-
-* No separate power supply!
-* With development resources and proven-in-use
-* Low PCB count
-
-* Soundcard or amplifier? -> Preferably soundcard for I2S usage (instead of Raspberry Pi PWM)
-
-* Adafruit I2S 3W Mono Amp MAX98357A: https://www.adafruit.com/product/3006, https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp, https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/pinouts
-** Mono and no headphone out
-
-* DACBerry AMP   3W Stereo Amp: https://www.osaelectronics.com/product/dacberry-amp-for-raspberry-pi-zero/
-** Sold out
-
-* DACBerry AMP+ 10W Stereo Amp: https://www.osaelectronics.com/product/dacberry-amp-plus/
-** 10W too much, has headphone out, apart it fits perfect
-
-* WM8960 Stereo Amp (1W Speaker + Headphone): https://www.waveshare.com/wm8960-audio-hat.htm, https://www.waveshare.com/w/upload/1/18/WM8960_v4.2.pdf, https://www.waveshare.com/w/upload/f/fa/WM8960_Audio_HAT_Schematic.pdf, https://www.waveshare.com/wiki/WM8960_Audio_HAT, https://www.reichelt.de/raspberry-pi-shield-hi-fi-stereo-sound-hat-wm8960-rpi-shd-stereo-p266063.html
-** Only 1W
-** Jack Detect Bug
-
-* HiFiBerry DAC2 Pro: https://www.hifiberry.com/shop/boards/hifiberry-dac2-pro/, https://www.hifiberry.com/docs/data-sheets/datasheet-dac2-pro/
-* HifiBerry Miniamp: https://www.hifiberry.com/docs/data-sheets/datasheet-miniamp/
-** HifiBerry only has digital or analog AMPs 
-
-* Adafruit I2S Stereo Decoder, https://www.adafruit.com/product/3678, https://learn.adafruit.com/adafruit-i2s-stereo-decoder-uda1334a
-** Only line output, but apparently headphones work with distortions, but no jack detect switch
-
-* Adafruit Mono Amp: https://www.adafruit.com/product/2130
-** Only 2.5W
-
 * Stereo 3.7W Class D Audio Amplifier - MAX98306 + Klinkenanschluss: https://www.adafruit.com/product/987, https://learn.adafruit.com/stereo-3-7w-class-d-audio-amplifier, https://learn.adafruit.com/stereo-3-7w-class-d-audio-amplifier/inputs-and-outputs, https://learn.adafruit.com/stereo-3-7w-class-d-audio-amplifier/build-a-portable-sound-system, https://cdn-shop.adafruit.com/datasheets/MAX98306schem.png
-* Cheapest solution: https://forums.adafruit.com/viewtopic.php?f=19&t=144892, https://www.adafruit.com/product/1700, https://forums.adafruit.com/download/file.php?id=63172&sid=0f47a811efd81ec87bd2b66c538b6e77, https://learn.adafruit.com/adafruit-tpa2016-2-8w-agc-stereo-audio-amplifier?view=all, https://www.adafruit.com/product/1699
-** Uses Raspberry Pi (poor?) PWM Audio Out, needs some wiring, but receives good reviews
+  * Cheapest solution: https://forums.adafruit.com/viewtopic.php?f=19&t=144892, https://www.adafruit.com/product/1700, https://forums.adafruit.com/download/file.php?id=63172&sid=0f47a811efd81ec87bd2b66c538b6e77, https://learn.adafruit.com/adafruit-tpa2016-2-8w-agc-stereo-audio-amplifier?view=all, https://www.adafruit.com/product/1699
+  * Uses Raspberry Pi (poor?) PWM Audio Out, needs some wiring, but receives good reviews
 
 ### Speaker
 
-* Speaker 4Ohm 3 Watt: https://www.adafruit.com/product/1314
+* Speaker: 8Ohm, 3 Watt
 
 ### Battery
 
-* Lithium Ion Polymer Battery - 3.7v 2500mAh ???|https://www.adafruit.com/product/328
+* Lithium Ion Polymer Battery - 1S3P, 3,7V, 7800mAh
 
-### Buttons
+### Case
 
-* Rugged Metal On/Off Switch with Green LED: https://www.adafruit.com/product/482
+* Self-made (wood)
 
-## Solution Strategy
+### Spotify client
+
+* https://github.com/tbrandenburg/musicbox-spotify-client
 
 ## Building blocks
 
@@ -91,21 +69,14 @@ DIY Raspberry Pi Music Box
 |Raspberry Pi Model 3 A+|https://www.adafruit.com/product/4027|25$|1|
 |PiTFT 3.5"|https://www.adafruit.com/product/2097|44.95$|1|
 |PowerBoost 1000 Charger|https://www.adafruit.com/product/2465|19.95$|1|
-|Amp|?|?|
-|Speaker|?|?|
-|Battery|?|?|
-|Buttons|?|?|
-|Case|?|?|
+|Amp|https://www.adafruit.com/product/987|9$|1|
+|Speaker|tbd.|tbd.|2|
+|Li 1S3P, 3,7V, 7800mAh|tbd.|30$|1|
+|Case|self-made|self-made|1|
 
-### Auxiliary parts list
+### Button circuit
 
-|Part|Link|Cost|Amount|
-|---|---|---|---|
-|Adafruit Perma-Proto HAT for Pi Mini Kit|https://www.adafruit.com/product/2310|4.95|2|
-|Abstandshalter (12mm) und Schrauben M2.5||||
-|Einbaumutter M2.5||||
-
-## Questions
+* The buttons are connected to RPi via 10kOhm pull-up
 
 ## Knowledge
 
