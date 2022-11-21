@@ -1,5 +1,5 @@
 # tb.music_box
-DIY Raspberry Pi Music Box
+DIY Portable Spotify Music Box
 
 ![MusicBox](musicbox.jpg)
 ![Inner MusicBox](musicbox_inner.jpg)
